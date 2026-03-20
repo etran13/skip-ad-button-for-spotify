@@ -27,8 +27,9 @@ class ViewController: NSViewController {
     @IBAction func handleButtonClick(_ sender: Any) {
         
         if let app = NSRunningApplication.runningApplications(withBundleIdentifier: "com.spotify.client").first { //Get the first item in the collection of running apps with the bundle identifier of Spotify
+            print(app)
             print("Terminating...")
-            app.terminate()
+            print(app.forceTerminate())
         }
         // Source - https://stackoverflow.com/a/58241536
         // Posted by vookimedlo
