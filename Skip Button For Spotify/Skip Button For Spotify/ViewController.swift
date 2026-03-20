@@ -9,6 +9,8 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    @IBOutlet weak var button1: NSButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +23,24 @@ class ViewController: NSViewController {
         }
     }
 
+    ///When button1 is clicked, this function will open Spotify.
+    @IBAction func handleButtonClick(_ sender: Any) {
+        print("Click!")
+        // Source - https://stackoverflow.com/a/58241536
+        // Posted by vookimedlo
+        // Retrieved 2026-03-19, License - CC BY-SA 4.0
 
+        guard let url: URL = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.spotify.client") else { return } //Get the URL for the application with the identifier .com.apple.Terminal
+
+        let configuration = NSWorkspace.OpenConfiguration()
+        configuration.arguments = ["/bin"]
+        NSWorkspace.shared.openApplication(at: url,
+                                           configuration: configuration,
+                                           completionHandler: nil)
+        
+
+    }
+    
+    
 }
 
