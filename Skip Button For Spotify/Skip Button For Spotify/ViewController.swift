@@ -32,6 +32,7 @@ class ViewController: NSViewController {
         guard let app = NSRunningApplication.runningApplications(withBundleIdentifier: "com.spotify.client").first else {
             return
         }
+        print("App Instance: \(app)")
             
         let starter = SpotifyStarter(object: app) //Create an observer of app in order to recieve notification on termination
         
