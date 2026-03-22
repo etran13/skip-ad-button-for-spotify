@@ -13,6 +13,8 @@ class ViewController: NSViewController {
     
     var timer: Timer?
     
+    var spotifyController: SpotifyController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,14 +27,18 @@ class ViewController: NSViewController {
         }
     }
 
-    ///When button1 is clicked, this function will open Spotify.
+    ///When button1 is clicked, this function will quit Spotify.
     @IBAction func handleButtonClick(_ sender: Any) {
         //TODO: Use observer instead?
-        if let app = NSRunningApplication.runningApplications(withBundleIdentifier: "com.spotify.client").first { //Get the first item in the collection of running apps with the bundle identifier of Spotify
+        if let app: NSRunningApplication = NSRunningApplication.runningApplications(withBundleIdentifier: "com.spotify.client").first { //Get the first item in the collection of running apps with the bundle identifier of Spotify
+            
+            
+            
             print(app)
             print(app.forceTerminate())
+            print("Terminated: " + String(app.isTerminated))
         }
-        waitForQuit()
+        //waitForQuit()
     }
     
     func waitForQuit() {
