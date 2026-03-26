@@ -706,13 +706,13 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Skip_Button_For_Spotify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="150"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFZ-7p-l8n">
-                                <rect key="frame" x="207" y="123" width="70" height="24"/>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFZ-7p-l8n">
+                                <rect key="frame" x="24" y="-60" width="352" height="270"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Skip Ad" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="B08-Ls-wfu">
+                                <buttonCell key="cell" type="bevel" bezelStyle="rounded" image="button" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="B08-Ls-wfu">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <connections>
@@ -728,4 +728,7 @@
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button" width="528" height="528"/>
+    </resources>
 </document>

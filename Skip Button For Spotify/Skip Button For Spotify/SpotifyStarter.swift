@@ -27,7 +27,6 @@ class SpotifyStarter: NSObject {
     }
     
     func startSpotify() {
-        print("isTerminated just changed to True")
         // Source - https://stackoverflow.com/a/58241536
         // Posted by vookimedlo
         // Retrieved 2026-03-19, License - CC BY-SA 4.0
